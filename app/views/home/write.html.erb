@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Antic|Do+Hyeon|Nanum+Gothic|Sunflower:300" rel="stylesheet">
+<style type = "text/css">
+    h1, h2, p{font-family: 'Antic', sans-serif; font-weight: 'bolder';}
+    h6, button, a{font-family: 'Do Hyeon', sans-serif;}
+    input, textarea{font-family: 'Sunflower', sans-serif;}
+</style>
+</head>
+
+<body>
+<div class="text-center" style = "margin-bottom:20px; background-color:white; margin-top:50px">
+  <b><i class="material-icons" style="font-size:70px">mail</i></b>
+</div>
+
+<div class="text-center" style = "margin-bottom:30px;">
+    <table style = "background-color:#FD9797;" border = "1" cellspacing = "0">
+    <tr>
+    <a style = "color:grey;">&nbsp||&nbsp</a>
+    <a href = "/" style = "color:black;">Inbox</a>
+    <a style = "color:grey;">&nbsp||&nbsp</a>
+    <a href = "#" style = "color:black;">Send</a>
+    <a style = "color:grey;">&nbsp||&nbsp</a>
+    </tr>
+    </table>
+</div>
+
+<div class = "container" style = "margin-top:100px">
+
+<form action="/home/create" method = "post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <center>
+  <div>
+    <div class="card" style="width:800px;">
+  	    <div class="card-body">
+  	        <div class="form-group" style = "text-align:left;">
+              <h6 align = "left"><label for="date">Date:</label></h6>
+              <input type = "date" name = "date" value = "2018-01-01">
+            </div>
+    	    <div class="form-group">
+              <h6 align = "left"><label for="usr">Title:</label></h6>
+              <input type="text" class="form-control" id="title" name = "title" placeholder = "Enter the title">
+            </div>
+            <div class="form-group">
+              <h6 align = "left"><label for="email">Email address:</label></h6>
+              <input type="email" class="form-control" id="email" name = "email" placeholder = "Enter the email">
+            </div>
+            <div class="form-group">
+              <h6 align = "left"><label for="comment">Content:</label></h6>
+              <textarea class="form-control" rows="5" id="content" name = "content" placeholder = "Enter the content"></textarea>
+            </div>
+    		<button type="submit" class="btn" style = "background-color:#F188A5; color:white;">Send</button>
+  		</div>
+  	</div>
+</div>
+</center>
+</form>
+</div>
+
+</body>
+</html>
